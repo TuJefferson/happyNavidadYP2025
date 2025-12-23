@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Navidad</title>
+    <link rel="icon" type="image/png" href="img/YPLogo.png">
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: inherit !important;
+            font-size: 10px;
+            opacity: 0.7;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .es-content-body {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1,
+        h3 {
+            color: #333333;
+        }
+
+        p {
+            color: #333333;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .small {
+            margin-top: 20px;
+        }
+
+        .app-link img {
+            width: 150px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .app-link img {
+                width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+
+            .app-link img {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="es-content-body">
+        <h1>So in English... </h1>
+
+        <p>
+            Hello
+        </p>
+        <p>
+            I would like to take this opportunity to extend my best wishes to you, at the most emotional and joyful time
+            of the
+            year… <strong> (although not as emotional as the FIFA world cup 😅)</strong>
+        </p>
+        <p>
+            May the closing of this year be a moment of <strong> reflection, balance and transformation </strong> , so
+            that 2026
+            arrives accompanied by
+            <strong> health, stability, growth and new opportunities. </strong>
+        </p>
+
+        <p>
+            I hope that the beginning of the new year allows us to continue moving forward with commitment, learning and
+            collaboration,
+            facing challenges with a positive and constructive vision. </p>
+
+        <p>
+            That's for sure, <strong> NEVER STOP LEARNING! 🧠 </strong>
+        </p>
+
+        <p>Ultimately, I wish you a Merry Christmas and a Prosperous New Year for you and your families, full of
+            <strong>
+                health,
+                well-being, success, progress and hope. </strong></p>
+        <img src="https://ecdexhl.stripocdn.email/content/guids/CABINET_24942574f881c728c419eedce06927d2/images/71111512570077222.png"
+            alt="Happy New Year">
+        <div class="small">
+            <a class="app-link" href="https://ypprogrammer.com/" target="_blank">
+                <img src="/img/YP_logo_Negro.png" alt="Yefferson Perez Developer">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflakes() {
+            const numFlakes = 50;
+            const colors = ['#ffffff', '#d4f1f9', '#e8f8ff'];
+
+            for (let i = 0; i < numFlakes; i++) {
+                const flake = document.createElement('div');
+                flake.classList.add('snowflake');
+                flake.innerHTML = '❄';
+                document.body.appendChild(flake);
+
+                const size = Math.random() * 10 + 10 + 'px';
+                flake.style.left = Math.random() * 100 + 'vw';
+                flake.style.fontSize = size;
+                flake.style.color = colors[Math.floor(Math.random() * colors.length)];
+                flake.style.animationDuration = Math.random() * 3 + 2 + 's';
+                flake.style.animationDelay = Math.random() * 5 + 's';
+            }
+        }
+
+        createSnowflakes();
+    </script>
+</body>
+
+</html>
