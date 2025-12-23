@@ -10,102 +10,108 @@
     <link rel="shortcut icon" type="image/png" href="img/YPLogo.png?v=1">
     <title>Happy Navidad</title>
 
- <style>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background: #112055;
+        }
 
-    body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  background: #112055;
-}
-svg {
-  max-height: 60vh;
-  overflow:visible;
-}
-path {
-  fill: #379157;
-  stroke: #379157;
-  stroke-width: .2;
-  transform: scale(0);
-  transform-origin: 50% 50%;
-  animation: star 8s ease-in-out infinite;
-  animation-delay: calc( var(--no) * .025s );
-  transform-box: fill-box;
-}
-@keyframes star {
-  0% {
-    transform: scale(0);
-    animation-timing-function: cubic-bezier(.74,1.72,.57,1.01)
-  }
-  10% {
-    transform: scale(1);
-  }
-  65% {
-    transform: translateY(0px) scale(1);
-  }
-  75% {
-    transform: translateY(50px) scale(0);
-  }
-  100% {
-    transform: translateY( 0px ) scale(0);
-  }
-}
+        svg {
+            max-height: 60vh;
+            overflow: visible;
+        }
 
-body:after {
-  content: "";
-  color: #fff;
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 1vh;
-  right: 1vw;
-}
+        path {
+            fill: #379157;
+            stroke: #379157;
+            stroke-width: .2;
+            transform: scale(0);
+            transform-origin: 50% 50%;
+            animation: star 8s ease-in-out infinite;
+            animation-delay: calc(var(--no) * .025s);
+            transform-box: fill-box;
+        }
 
-#botonPrincipal {
-  display: none;
-  position: absolute;
-  bottom: 100px;
-  padding: 12px 30px;
-  background: linear-gradient(135deg, #379157, #2a6b42);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: fadeIn 0.6s ease-in-out;
-}
+        @keyframes star {
+            0% {
+                transform: scale(0);
+                animation-timing-function: cubic-bezier(.74, 1.72, .57, 1.01)
+            }
 
-#botonPrincipal:hover {
-  background: linear-gradient(135deg, #2a6b42, #1f4f2f);
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(55, 145, 87, 0.4);
-}
+            10% {
+                transform: scale(1);
+            }
 
-#botonPrincipal:active {
-  transform: scale(0.98);
-}
+            65% {
+                transform: translateY(0px) scale(1);
+            }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+            75% {
+                transform: translateY(50px) scale(0);
+            }
 
-/* Estilos del Modal */
-.modal-content {
-  box-shadow: 0 8px 32px rgba(55, 145, 87, 0.3);
-}
+            100% {
+                transform: translateY(0px) scale(0);
+            }
+        }
 
- </style>
+        body:after {
+            content: "";
+            color: #fff;
+            font-family: sans-serif;
+            position: absolute;
+            bottom: 1vh;
+            right: 1vw;
+        }
+
+        #botonPrincipal {
+            display: none;
+            position: absolute;
+            bottom: 100px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #379157, #2a6b42);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        #botonPrincipal:hover {
+            background: linear-gradient(135deg, #2a6b42, #1f4f2f);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(55, 145, 87, 0.4);
+        }
+
+        #botonPrincipal:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos del Modal */
+        .modal-content {
+            box-shadow: 0 8px 32px rgba(55, 145, 87, 0.3);
+        }
+    </style>
 
 
 </head>
@@ -120,7 +126,8 @@ body:after {
             style="--no: 1; transform: scale(222);" />
         <path d="m126.73 127.78-1.39-.2-.95 1.03-.24-1.38-1.27-.59 1.24-.65.16-1.39 1 .98 1.38-.28-.62 1.26z"
             style="--no:2" />
-        <path d="m120.86 129.62-1.36-.62-1.28.78.16-1.49-1.14-.97 1.46-.31.58-1.38.75 1.3 1.49.12-1 1.1z" style="--no:3" />
+        <path d="m120.86 129.62-1.36-.62-1.28.78.16-1.49-1.14-.97 1.46-.31.58-1.38.75 1.3 1.49.12-1 1.1z"
+            style="--no:3" />
         <path d="m115.25 131.06-2.48-1.02-2.25 1.47.2-2.68-2.1-1.68 2.62-.64.95-2.5 1.41 2.28 2.68.12-1.73 2.05z"
             style="--no:4" />
         <path d="m106.57 132.05-1.32-.75-1.37.67.3-1.49-1.05-1.09 1.5-.17.71-1.34.64 1.37 1.49.27-1.12 1.02z"
@@ -143,7 +150,8 @@ body:after {
         <path d="m66.62 105.3-.92-.58-.99.42.27-1.05-.7-.81 1.07-.07.55-.92.4 1 1.05.24-.83.7z" style="--no:14" />
         <path d="m64.58 114.97-3.79-2.46-4.18 1.72 1.17-4.36-2.93-3.45 4.52-.23 2.37-3.85 1.61 4.22 4.4 1.06-3.52 2.85z"
             style="--no:15" />
-        <path d="m57.23 104.7-1.17-.97-1.46.43.56-1.42-.86-1.26 1.52.1.94-1.2.38 1.47 1.43.51-1.28.82z" style="--no:16" />
+        <path d="m57.23 104.7-1.17-.97-1.46.43.56-1.42-.86-1.26 1.52.1.94-1.2.38 1.47 1.43.51-1.28.82z"
+            style="--no:16" />
         <path d="m51.83 107.18-2.77-.7-2.14 1.9-.2-2.85-2.46-1.45 2.65-1.07.62-2.78 1.84 2.18 2.83-.27-1.5 2.42z"
             style="--no:17" />
         <path d="m54.36 113.53-2.02.23-.96 1.8-.84-1.86-2-.36 1.5-1.37-.28-2.01 1.77 1 1.83-.88-.41 1.99z"
@@ -160,7 +168,8 @@ body:after {
         <path d="M30.14 114.38h-1l-.54.83-.32-.94-.95-.27.8-.59-.04-.99.8.58.93-.34-.3.94z" style="--no:24" />
         <path d="m25.22 120.18-2.06-.89-1.9 1.19.21-2.24-1.72-1.44 2.2-.49.84-2.08 1.14 1.93 2.24.16-1.49 1.69z"
             style="--no:25" />
-        <path d="m18.67 122.17-1.53-.5-1.27.99v-1.61l-1.33-.91 1.53-.5.45-1.54.95 1.3 1.6-.05-.94 1.3z" style="--no:26" />
+        <path d="m18.67 122.17-1.53-.5-1.27.99v-1.61l-1.33-.91 1.53-.5.45-1.54.95 1.3 1.6-.05-.94 1.3z"
+            style="--no:26" />
         <path d="m12.72 123.8-1.1-.26-.84.74-.07-1.12-.97-.57 1.04-.42.24-1.1.73.86 1.11-.1-.6.95z" style="--no:27" />
         <path d="m8.25 126.29-1.18-.52-1.1.67.14-1.28-.98-.84 1.26-.26.49-1.2.65 1.12 1.28.1-.86.96z" style="--no:28" />
         <path d="m3.43 128.67-1.11-.26-.85.78-.1-1.14-1-.57 1.06-.45.22-1.12.76.86 1.14-.13-.6.99z" style="--no:29" />
@@ -179,7 +188,8 @@ body:after {
             style="--no:37" />
         <path d="m51.23 94.34-1.54.2-.72 1.37-.65-1.4-1.54-.27 1.14-1.05-.23-1.54 1.36.75 1.39-.7-.3 1.53z"
             style="--no:38" />
-        <path d="m50.46 90.7-1.14-.82-1.29.58.42-1.35-.94-1.04 1.4-.02.7-1.22.45 1.33 1.38.3-1.13.84z" style="--no:39" />
+        <path d="m50.46 90.7-1.14-.82-1.29.58.42-1.35-.94-1.04 1.4-.02.7-1.22.45 1.33 1.38.3-1.13.84z"
+            style="--no:39" />
         <path d="m60.25 91.43-3.43-1.99-3.46 1.93.83-3.88-2.9-2.7 3.94-.4 1.67-3.6 1.6 3.63 3.94.47-2.95 2.65z"
             style="--no:40" />
         <path d="m64.71 84.62-.84-.82-1.13.3.52-1.04-.64-.99 1.16.17.74-.91.2 1.15 1.09.42-1.04.55z" style="--no:41" />
@@ -192,13 +202,16 @@ body:after {
             style="--no:45" />
         <path d="m89.28 83.7-1.25-.96-1.47.57.53-1.48-1-1.23 1.58.06.86-1.34.44 1.52 1.52.4-1.3.89z" style="--no:47" />
         <path d="m94.37 80.9-1.12-.38-.9.76.03-1.18-1-.62 1.12-.34.28-1.14.68.96 1.17-.09-.7.94z" style="--no:48" />
-        <path d="m53.76 83.53-.99-.56-.99.55.24-1.11-.84-.78 1.13-.12.48-1.03.46 1.04 1.13.13-.84.77z" style="--no:49" />
+        <path d="m53.76 83.53-.99-.56-.99.55.24-1.11-.84-.78 1.13-.12.48-1.03.46 1.04 1.13.13-.84.77z"
+            style="--no:49" />
         <path d="m49.34 84.58-2.28-1.18-2.18 1.36.41-2.53-1.96-1.66 2.54-.39.97-2.37 1.15 2.3 2.56.18-1.82 1.8z"
             style="--no:50" />
-        <path d="m40.4 85.88-1.61-1.35-1.99.68.8-1.94-1.27-1.68 2.1.15 1.2-1.72.5 2.04 2.01.62-1.79 1.1z" style="--no:51" />
+        <path d="m40.4 85.88-1.61-1.35-1.99.68.8-1.94-1.27-1.68 2.1.15 1.2-1.72.5 2.04 2.01.62-1.79 1.1z"
+            style="--no:51" />
         <path d="m34.53 85.6-3.5-1.38-2.97 2.3.23-3.76-3.1-2.13 3.64-.93 1.07-3.6 2 3.17 3.77-.1-2.4 2.9z"
             style="--no:52" />
-        <path d="m23.9 86.9-1.68-1.5-2.15.66L21 84l-1.3-1.84 2.24.24 1.35-1.8.47 2.2 2.13.72-1.95 1.13z" style="--no:53" />
+        <path d="m23.9 86.9-1.68-1.5-2.15.66L21 84l-1.3-1.84 2.24.24 1.35-1.8.47 2.2 2.13.72-1.95 1.13z"
+            style="--no:53" />
         <path d="m18.21 88.34-1.62-.6-1.34 1.1.06-1.73-1.45-.94 1.66-.47.44-1.67.97 1.43 1.72-.1-1.06 1.37z"
             style="--no:54" />
         <path d="m35.48 77.6-1.07-.58-1.05.62.22-1.2-.92-.8 1.21-.16.48-1.12.53 1.1 1.21.11-.88.84z" style="--no:55" />
@@ -225,10 +238,12 @@ body:after {
         <path d="m29.58 65.7-1.85-.51-1.39 1.32-.08-1.91-1.69-.92 1.8-.67.35-1.89 1.2 1.51 1.9-.26-1.07 1.6z"
             style="--no:67" />
         <path d="m22.67 67.35-.95-.82-1.19.4.5-1.16-.75-1.01 1.25.1.73-1 .28 1.21 1.2.39-1.08.64z" style="--no:68" />
-        <path d="m46.67 60.54-2.1-1.18-2.09 1.2.48-2.36-1.79-1.62 2.4-.28.99-2.2 1 2.2 2.4.26-1.78 1.62z" style="--no:69" />
+        <path d="m46.67 60.54-2.1-1.18-2.09 1.2.48-2.36-1.79-1.62 2.4-.28.99-2.2 1 2.2 2.4.26-1.78 1.62z"
+            style="--no:69" />
         <path d="m52.22 59.39-1.15-.58-1.08.7.2-1.27-1-.82 1.27-.2.46-1.2.6 1.14 1.27.08-.9.9z" style="--no:70" />
         <path d="m57.73 56.34-.74-.95-1.19.16.67-1-.52-1.08 1.15.33.88-.82.04 1.2 1.05.57-1.12.4z" style="--no:71" />
-        <path d="m66.78 48.61-1.14-.34-.88.81-.03-1.19-1.04-.59 1.12-.4.24-1.17.73.95 1.18-.13-.68.98z" style="--no:72" />
+        <path d="m66.78 48.61-1.14-.34-.88.81-.03-1.19-1.04-.59 1.12-.4.24-1.17.73.95 1.18-.13-.68.98z"
+            style="--no:72" />
         <path d="m60.82 51.53-1.55-1.18-1.8.73.63-1.83-1.25-1.49 1.95.04 1.03-1.65.56 1.86 1.88.47-1.6 1.1z"
             style="--no:73" />
         <path d="m53.55 54.76-2.32-1.74-2.68 1.11.93-2.74-1.88-2.21 2.9.04 1.5-2.48.86 2.77 2.82.68-2.37 1.67z"
@@ -239,14 +254,17 @@ body:after {
             style="--no:76" />
         <path d="m33.37 48.93-1.14-.4-.92.79.02-1.21-1.03-.64 1.16-.35.28-1.18.7 1 1.2-.1-.73.97z" style="--no:77" />
         <path d="m44 43.45-1.1-.09-.66.9-.25-1.08-1.06-.34.95-.58v-1.11l.84.73 1.06-.35-.44 1.03z" style="--no:78" />
-        <path d="m47.65 45.49-1.2-1.17-1.63.44.74-1.51-.92-1.41 1.67.23 1.06-1.3.28 1.65 1.58.6-1.49.79z" style="--no:79" />
+        <path d="m47.65 45.49-1.2-1.17-1.63.44.74-1.51-.92-1.41 1.67.23 1.06-1.3.28 1.65 1.58.6-1.49.79z"
+            style="--no:79" />
         <path d="m55.3 43.35-2.53-.88-2.06 1.72.06-2.68-2.28-1.42 2.57-.78.65-2.6 1.53 2.2 2.68-.19-1.62 2.14z"
             style="--no:80" />
-        <path d="m59.03 37.84-1.01-.56-1 .58.22-1.13-.86-.77 1.15-.14.46-1.06.49 1.05 1.14.12-.84.78z" style="--no:81" />
+        <path d="m59.03 37.84-1.01-.56-1 .58.22-1.13-.86-.77 1.15-.14.46-1.06.49 1.05 1.14.12-.84.78z"
+            style="--no:81" />
         <path d="m53.55 34.33-1.91-1.11-1.93 1.07.46-2.16-1.62-1.51 2.2-.22.94-2.01.9 2.02 2.19.27-1.65 1.48z"
             style="--no:82" />
         <path d="m46.29 36.65-.8-.77-1.05.3.48-1-.6-.91 1.09.15.68-.85.2 1.08 1.02.39-.97.51z" style="--no:83" />
-        <path d="m39.44 36.68-1.15-1.11-1.56.42.7-1.45-.88-1.34 1.6.22 1-1.25.29 1.58 1.5.57-1.42.75z" style="--no:84" />
+        <path d="m39.44 36.68-1.15-1.11-1.56.42.7-1.45-.88-1.34 1.6.22 1-1.25.29 1.58 1.5.57-1.42.75z"
+            style="--no:84" />
         <path d="m46.78 32.72-2.41-1.47-2.49 1.33.65-2.75-2.03-1.96 2.8-.23 1.25-2.53 1.09 2.6 2.78.4-2.13 1.83z"
             style="--no:85" />
         <path d="m50.22 23.8-2.4-.6-1.74 1.73-.16-2.46-2.19-1.13 2.3-.9.39-2.44 1.57 1.9 2.43-.38-1.32 2.08z"
@@ -255,14 +273,16 @@ body:after {
     </svg>
     <br>
     <button id="botonPrincipal" data-bs-toggle="modal" data-bs-target="#miModal">Continuar</button>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="background: rgba(17, 32, 85, 0.95); border: 2px solid #379157; color: white;">
+            <div class="modal-content"
+                style="background: rgba(17, 32, 85, 0.95); border: 2px solid #379157; color: white;">
                 <div class="modal-header border-0">
                     <h1 class="modal-title fs-5" id="miModalLabel" style="color: #d8e540;">¡Happy Navidad!🎄</h1>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="text-align: center;">
                     <p style="font-size: 16px; margin-bottom: 20px;">
@@ -272,20 +292,24 @@ body:after {
                     </p>
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="card" style="background: rgba(55, 145, 87, 0.2); border: 1px solid #379157; color: white;">
+                            <div class="card"
+                                style="background: rgba(55, 145, 87, 0.2); border: 1px solid #379157; color: white;">
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: #d8e540;">Español</h5>
                                     <p class="card-text">Disfruta del contenido en español</p>
-                                    <a href="español.html" class="btn btn-sm" style="background: #379157; color: white; border: none;">Continuar</a>
+                                    <a href="spanish.html" class="btn btn-sm"
+                                        style="background: #379157; color: white; border: none;">Continuar</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="card" style="background: rgba(55, 145, 87, 0.2); border: 1px solid #379157; color: white;">
+                            <div class="card"
+                                style="background: rgba(55, 145, 87, 0.2); border: 1px solid #379157; color: white;">
                                 <div class="card-body">
                                     <h5 class="card-title" style="color: #d8e540;">English</h5>
                                     <p class="card-text">Enjoy the content in English</p>
-                                    <a href="inglés.html" class="btn btn-sm" style="background: #379157; color: white; border: none;">Continue</a>
+                                    <a href="english.html" class="btn btn-sm"
+                                        style="background: #379157; color: white; border: none;">Continue</a>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +321,7 @@ body:after {
             </div>
         </div>
     </div>
-    
+
     <footer style="
         position: absolute;
         bottom: 0;
@@ -306,21 +330,17 @@ body:after {
         padding: 10px 0;
         background: rgba(0,0,0,0.3);
     ">
-        <img 
-            src="img/YP_logo_blanco.png" 
-            alt="Copyright"
-            style="height: 30px; margin-bottom: 5px;"
-        >
+        <img src="img/YP_logo_blanco.png" alt="Copyright" style="height: 30px; margin-bottom: 5px;">
         <div style="color:#ffffff; font-size: 12px;">
-        Copyright © 2025 All rights reserved.
+            Copyright © 2025 All rights reserved.
         </div>
     </footer>
     <script>
         // Mostrar el botón después de que la animación SVG se complete una vez
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // La animación dura 8 segundos (según @keyframes star 8s)
             // Esperamos ese tiempo para mostrar el botón
-            setTimeout(function() {
+            setTimeout(function () {
                 const boton = document.getElementById('botonPrincipal');
                 if (boton) {
                     boton.style.display = 'block';
@@ -331,4 +351,5 @@ body:after {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
